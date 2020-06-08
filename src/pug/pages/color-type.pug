@@ -1,0 +1,26 @@
+extends ../layout/main
+
+include ../utils/mixins
+
+block variables
+  - var title = 'Colors & Type';
+  - var description = 'Settings of the all pages';
+  - var pageClass = 'color-type';
+
+block main-content
+  img(src="/assets/img/logo-gray.svg", alt="Лого" class="logo")
+
+  .color-type-container
+    .color-pattern
+      +color-item('dark-shade-100',{name: 'Dark Shade 100%', code: '#1F2041'})
+      +color-item('dark-shade-75',{name: 'Dark Shade 75%', code: '#1F2041'})
+      +color-item('dark-shade-50',{name: 'Dark Shade 50%', code: '#1F2041'})
+      +color-item('dark-shade-25',{name: 'Dark Shade 25%', code: '#1F2041'})
+      +color-item('dark-shade-5',{name: 'Dark Shade 5%', code: '#1F2041'})
+      +color-item('purple',{name: 'Purple', code: '#BC9CFF'})
+      +color-item('green',{name: 'Green', code: '#6FCF97'})
+    .type-pattern
+      +text-item('h1','H1','This one is the sub-section or widget title')
+      +text-item('h2','H2','Next one is the item title inside widgets')
+      +text-item('h3','H3','This is a label or CTA text')
+      +text-item('text','Body',`This is the body text which is used for most of the design, like paragraphs, lists, etc.`)

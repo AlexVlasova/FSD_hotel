@@ -1,0 +1,11 @@
+mixin color-item(color,desc)
+  .color-item
+    div(class='color-box '+color)
+    .item-descr
+      .color-name=desc.name
+      .color-code=desc.code
+
+mixin text-item(size,abr,desc)
+  div(class='text-item '+size)
+    .text-name=abr
+    .text-desc=desc
